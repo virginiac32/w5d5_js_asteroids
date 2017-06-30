@@ -65,4 +65,4 @@ function sumThree(num1, num2, num3) {
   return num1 + num2 + num3;
 }
 
-console.log(sumThree.curry2(3)(4)(20)(6)); // == 30
+console.log(sumThree.curry2(3)(4)(20)(6)); // == 30 
