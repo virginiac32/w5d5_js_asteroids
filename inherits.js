@@ -1,8 +1,6 @@
 Function.prototype.inherits = function (parent) {
-    function Surrogate () {}
-    Surrogate.prototype = parent.prototype;
-    this.prototype = new Surrogate();
-    this.prototype.constructor = this;
+  this.prototype = Object.create(parent.prototype);
+  this.prototype.constructor = this;
 }
 
 function MovingObject () {}
@@ -29,4 +27,5 @@ let virginia = new MovingObject();
 // console.log(virginia.float());
 
 console.log(joey.__proto__);
+console.log(virginia.__proto__);
 console.log(joey instanceof Ship);
